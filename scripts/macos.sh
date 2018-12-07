@@ -19,15 +19,15 @@ meslo_url="https://github.com/powerline/fonts/raw/master/Meslo%20Slashed/Meslo%2
 cd ${font_library_path} && { curl -fsSL ${meslo_url} -o "Meslo LG M Regular for Powerline.ttf" ; cd -; }
 
 ## Oh My Zsh ##
+ZSH_CUSTOM=~/.oh-my-zsh/custom # bugfix
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # add Powerlevel9k theme
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/bhilburn/powerlevel9k.git ${ZSH_CUSTOM}/themes/powerlevel9k
 
 # auto suggestions
-ZSH_CUSTOM=$HOME/.oh-my-zsh/custom # bugfix
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins/zsh-autosuggestions
 
 # link zsh configuration
